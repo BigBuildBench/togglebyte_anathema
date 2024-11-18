@@ -1,0 +1,9 @@
+[package]
+name = "anathema-default-widgets"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+
+[lints]
+workspace = true

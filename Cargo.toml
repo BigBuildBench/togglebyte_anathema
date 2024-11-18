@@ -1,0 +1,54 @@
+[package]
+name = "anathema"
+edition = "2021"
+version = "0.3.0"
+license = "MIT"
+description = "Create beautiful, easily customisable terminal applications"
+keywords = ["tui", "terminal", "widgets", "ui"]
+categories = ["command-line-interface", "tui", "terminal", "template", "markup"]
+readme = "./README.md"
+documentation = "https://docs.rs/anathema"
+homepage = "https://github.com/togglebyte/anathema"
+repository = "https://github.com/togglebyte/anathema"
+
+[dependencies]
+
+[lints]
+workspace = true
+
+[workspace.package]
+version = "0.3.0"
+edition = "2021"
+
+[workspace.dependencies]
+bitflags = "2.4.1"
+crossterm = "0.28.1"
+unicode-width = "0.1.11"
+flume = "0.11.0"
+notify = "6.1.1"
+
+[workspace]
+members = [
+    "anathema-backend", 
+    "anathema-runtime", 
+    "anathema-debug", 
+    "anathema-default-widgets", 
+    "anathema-geometry", 
+    "anathema-state",
+    "anathema-state-derive",
+    "anathema-store",
+    "anathema-templates", 
+    "anathema-widgets", 
+]
+
+[workspace.lints.rust]
+rust_2018_idioms = "deny"
+
+[workspace.lints.clippy]
+from_over_into = "allow"
+len_without_is_empty = "allow"
+new_without_default = "allow"
+should_implement_trait = "allow"
+type_complexity = "allow"
+too_many_arguments = "allow"
+wrong_self_convention = "allow"
